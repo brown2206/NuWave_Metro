@@ -11,7 +11,9 @@ $(function() {
         })
         .done(function(data) {
             // alert("success");
-            console.log(data);
+            // console.log(data.Stations[0].Name);
+            var stations = data.Stations;
+            console.log(stations);
         })
         .fail(function() {
             alert("error");
