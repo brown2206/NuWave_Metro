@@ -17,6 +17,7 @@ $(function() {
             var stations = data.Stations;
 
             var orangeMarkers = [];
+            var redMarkers = [];
 
             for (var i = 0; i < stations.length; i++){
               if (stations[i].LineCode1 == "OR" || stations[i].LineCode2 == "OR" || stations[i].LineCode3 == "OR" || stations[i].LineCode4 == "OR"){
@@ -24,12 +25,13 @@ $(function() {
                 var orangeMarker = L.marker([orangeRailStation.Lat, orangeRailStation.Lon])
                   .bindPopup("<h4>" + orangeRailStation.Name);
                 orangeMarkers.push(orangeMarker);
+              } else if (stations[i].LineCode1 == "RD" || stations[i].LineCode2 == "RD" || stations[i].LineCode3 == "RD" || stations[i].LineCode4 == "RD"){
+                var redRailStation = stations[i];
+                var redMarker = L.marker([redRailStation.Lat, redRailStation.Lon]).addTo(mymap)
+                  .bindPopup("<h4>" + redRailStation.Name);
+                redMarkers.push(redMarker);
               }
-              //
-              // var orangeMarker = L.marker([orangeStation.Lat, orangeStation.Lon])
-              //   .bindPopup("<h4>" + orangeStation.Name);
-              //
-              // orangeMarkers.push(orangeMarker);
+
             }
 
             createMap(L.layerGroup(orangeMarkers));
@@ -61,7 +63,6 @@ $(function() {
                     }).addTo(mymap);
 
                 }
-
 
             // var stations = data.Stations;
             //
