@@ -6,3 +6,23 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiYnJvd24yMjA2IiwiYSI6ImNqYnUxNjh3dDFjbWkycW1rbWEzOG9kZzkifQ.-G3Zsn-0wDbCcSfM8C7w0A'
 }).addTo(mymap);
+
+$(function() {
+        var params = {
+            "api_key": "a8bfd4227589430d84ce3ebd4ecb46da",
+            // Request parameters
+            // "LineCode": "RD",
+        };
+
+        $.ajax({
+            url: "https://api.wmata.com/Rail.svc/json/jStations?" + $.param(params),
+            type: "GET",
+        })
+        .done(function(data) {
+            // alert("success");
+            console.log(data);
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
