@@ -37,7 +37,7 @@ $(function() {
                 });
 
                 var initialMaps = {
-                  "Plain Map": plainmap
+                  "Washington Metropolitan Area": plainmap
                 };
 
                 var overlayMaps = {
