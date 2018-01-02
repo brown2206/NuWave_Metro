@@ -11,7 +11,18 @@ $(function() {
         })
         .done(function(data) {
             // alert("success");
-            // console.log(data.Stations[0].Name);
+            // console.log(data.Stations);
+
+            // Color Stations: Test Code
+            // var orange_stations = [];
+            // for (var i = 0; i < stations.length; i++){
+            //   if (stations[i].LineCode1 == "OR" || stations[i].LineCode2 == "OR" || stations[i].LineCode3 == "OR" || stations[i].LineCode4 == "OR"){
+            //     orange_stations.push(stations[i]);
+            //
+            //   }
+            // }
+            // console.log(orange_stations);
+
             var stations = data.Stations;
 
             var railMarkers = [];
