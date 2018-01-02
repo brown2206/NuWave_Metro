@@ -1,11 +1,11 @@
-/* #mapid {
+#mapid {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-} */
-
-#mapid {
-  height: 180px;
 }
+
+/* #mapid {
+  height: 180px;
+} */

@@ -20,7 +20,8 @@ $(function() {
               var railStation = stations[i];
 
               var railMarker = L.marker([railStation.Lat, railStation.Lon])
-                .bindPopup("<h3>" + railStation.Name);
+                // .bindPopup("<h3>" + railStation.Name + "<p>" + railStation.Address.Street + "<p>" + railStation.Address.City + "<p>" + railStation.Address.State + "<p>" + railStation.Address.Zip);
+                .bindPopup("<h4>" + railStation.Name + "<br>" + railStation.Address.Street + "<br>" + railStation.Address.City + " " + railStation.Address.State + " " + railStation.Address.Zip);
 
             railMarkers.push(railMarker);
             }
